@@ -27,12 +27,12 @@ public class Task2 {
     public static int countSmileys(String[] arr) {
         int sum = 0;
         for (String item : arr) {
-            if (item.length == 2) {
+            if (item.length() == 2) {
                 if ((item.startsWith(":") || item.startsWith(";")) && (item.endsWith("D") || item.endsWith(")"))) {
                     sum++;
                 }
             }
-            if (arr.length == 3) {
+            if (item.length() == 3) {
                 if ((item.startsWith(":") || item.startsWith(";") && (item.charAt(1) == '-' || item.charAt(1) == '~') && (item.endsWith("D") || item.endsWith(")")))) {
                     sum++;
                 }
@@ -40,7 +40,7 @@ public class Task2 {
             }
         }
             return sum;
-// Я НЕ ПОНИМАЮ ЧТО НЕ ТАК(((( Я СДАЮСЬ
+
 
     }}
 
