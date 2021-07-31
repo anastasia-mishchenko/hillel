@@ -2,7 +2,10 @@ package abstractInterfaces;
 
 public class Swallow extends Birds implements CanFly, CanEat {
 
-
+    @Override
+    public String toString() {
+        return "Swallow{}";
+    }
 
     @Override
     public void eatBugs() {
