@@ -6,7 +6,8 @@ import java.io.InputStreamReader;
 
 public class LoginFormatException extends Exception {
 
-    public LoginFormatException(String enter_valid_login) {
+    public LoginFormatException(String message) {
+        super(message);
 
     }
 }
