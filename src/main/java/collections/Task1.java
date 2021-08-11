@@ -11,22 +11,27 @@ public class Task1 {
         list.add("roza");
         list.add("loza");
 
-          for (String item:list) {          //почему тут падает ексепшн?
-            if (item.contains("р") && item.contains("л"))
-            {
+        for (int i = 0; i < list.size(); i++) {
+
+            if (list.get(i).contains ("r") && list.get(i).contains("l")){
                 continue;
-            }else  if (item.contains("r")) {
-                list.remove(item);
-            }else if (item.contains("l")){
-                list.add(item);
+            } else  if (list.get(i).contains("r") && ! list.get(i).contains("l"))   {
+                list.remove(list.get(i));
+                i--;
+            }else if (list.get(i).contains("l") && ! list.get(i).contains("r")){
+                list.add(list.get(i));
+                i++;
             }
-            System.out.println(item);
+            System.out.println(list.get(i));
+        }
+//        for (String item: list) {
+//            System.out.println(item);
+            
+        }
+
         }
 
 
-        }
 
 
-
-    }
 
