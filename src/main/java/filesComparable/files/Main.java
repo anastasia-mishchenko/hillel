@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.Properties;
 
 public class Main {
@@ -22,7 +23,26 @@ public class Main {
 
             String fileName = properties.getProperty("fileName");
 
-            Files.createFile(Path.of("src/" + fileName + ".txt"));
+            String FILE = "src/" + fileName + ".txt";
+
+            Path path = Paths.get(FILE);
+
+            Files.writeString(path, "My name is Nastia");
+
+            Path path1 = Path.of("src/files/files");
+
+            Files.move(path,path1);
+
+            List<String> list = Files.readAllLines(path1);
+            for (String item: list) {
+                System.out.println(item);
+                
+            }
+
+
+
+
+
 
 
 
