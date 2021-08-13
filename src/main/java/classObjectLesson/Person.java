@@ -43,28 +43,26 @@ public class Person {
             return true;
         }
         @Override
-        public int hashCode() {    // вопрос 1: если в примере было понятно что надо сравнивать по ДНК и ДНК там интовове, то в нашем случае что должен возвращать этот метод? Какое значение int?
-            return age;
+        public int hashCode() {
+            int i = 0;
+            if(isMarried){
+                i = 5;
+            } else {
+                i = 0;
+            }
+            return name.hashCode() + age + i;
         }
 
 //        9)
-//        public int anniversary (int age) {
-    // вопрос 2: я зависла как мне в этом методе пройтись по всем обьектам
+          public int anniversary () {
+              int count = age / 10;
+              return count;
+          }
 
-//            int num = 0;
-//            for (int i = 0; i < 100; i= i+10) {
-////              if (age = i || (age > i && age <= (i*2-1))){
-//            }
-//           if (age == 10 || (age > 10 && age <= 19)) {
-//                return 1;
-//                if (age == 20 || (age > 20 && age <= 29)) {
-//                    return 2;
-//                    if (age == 30 || (age > 30 && age <= 39)) {
-//                        return 3;
-//                    }
-    //public String firstLetterName (String name){
-            // тут тоже самое как пройти по обьектам?
-//    }
+        public char firstLetterName () {
+            char a = name.charAt(0);
+            return a;
+        }
 
 
 
